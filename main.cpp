@@ -17,7 +17,8 @@ struct ListNode {
 
 
 //#include "1-two-sum.cpp"
-#include "2-add-two.cpp"
+//#include "2-add-two.cpp"
+#include "3-longest-substring.cpp"
 
 
 
@@ -130,6 +131,20 @@ int main() {
         string out = listNodeToString(ret);
         cout << out << endl;
     }
+    return 0;
+}
+#endif
+
+#ifdef LEETCODE_3
+int main() {
+    string line;
+
+    while (getline(cin, line)) {
+        line = line.substr(1, line.size() - 2);
+
+        cout << Solution().lengthOfLongestSubstring(line) << endl;
+    }
+
     return 0;
 }
 #endif
