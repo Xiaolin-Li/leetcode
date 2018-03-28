@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <cstring>
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -18,7 +19,9 @@ struct ListNode {
 
 //#include "1-two-sum.cpp"
 //#include "2-add-two.cpp"
-#include "3-longest-substring.cpp"
+//#include "3-longest-substring.cpp"
+//#include "4-median-of.cpp"
+#include "5-longest-palindromic.cpp"
 
 
 
@@ -119,7 +122,6 @@ int main() {
 #ifdef LEETCODE_2
 int main() {
     string line;
-
     while (getline(cin, line)) {
         ListNode *l1 = stringToListNode(line);
         
@@ -138,7 +140,6 @@ int main() {
 #ifdef LEETCODE_3
 int main() {
     string line;
-
     while (getline(cin, line)) {
         line = line.substr(1, line.size() - 2);
 
@@ -149,3 +150,35 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_4
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums1 = stringToIntergerVector(line);
+        getline(cin, line);
+        vector<int> nums2 = stringToIntergerVector(line);
+
+        double ret = Solution().findMedianSortedArrays(nums1, nums2);
+
+        cout << ret << endl;
+    }
+
+    return 0;
+}
+#endif
+
+
+#ifdef LEETCODE_5
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        line = line.substr(1, line.size() - 2);
+        
+        string res = Solution().longestPalindrome(line);
+
+        cout << res << endl;
+    }
+
+    return 0;
+}
+#endif
