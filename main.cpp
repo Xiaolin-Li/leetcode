@@ -25,7 +25,8 @@ struct ListNode {
 //#include "5-longest-palindromic.cpp"
 //#include "6-zigzag-conversion.cpp"
 //#include "7-reverse-integer.cpp"
-#include "8-string-to-integer.cpp"
+//#include "8-string-to-integer.cpp"
+#include "9-palindrome-number.cpp"
 
 
 
@@ -263,4 +264,16 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_9
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        int x = stringToInteger(line);
 
+        bool res = Solution().isPalindrome(x);
+
+        cout << res << endl;
+    }
+    return 0;
+}
+#endif
