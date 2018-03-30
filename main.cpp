@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <assert.h>
+#include <limits.h>
 
 using namespace std;
 
@@ -23,7 +24,8 @@ struct ListNode {
 //#include "4-median-of.cpp"
 //#include "5-longest-palindromic.cpp"
 //#include "6-zigzag-conversion.cpp"
-#include "7-reverse-integer.cpp"
+//#include "7-reverse-integer.cpp"
+#include "8-string-to-integer.cpp"
 
 
 
@@ -247,5 +249,18 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_8
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        string str = stringToString(line);
+
+        int res = Solution().myAtoi(str);
+
+        cout << res << endl;
+    }
+    return 0;
+}
+#endif
 
 
