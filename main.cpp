@@ -26,7 +26,8 @@ struct ListNode {
 //#include "6-zigzag-conversion.cpp"
 //#include "7-reverse-integer.cpp"
 //#include "8-string-to-integer.cpp"
-#include "9-palindrome-number.cpp"
+//#include "9-palindrome-number.cpp"
+#include "10-regular-expression.cpp"
 
 
 
@@ -277,3 +278,29 @@ int main() {
     return 0;
 }
 #endif
+
+#ifdef LEETCODE_10
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        string s = stringToString(line);
+        getline(cin, line);
+        string p = stringToString(line);
+
+        bool res = Solution().isMatch(s, p);
+
+        cout << res << endl;
+    }
+    return 0;
+}
+#endif
+
+
+
+
+
+
+
+
+
+
