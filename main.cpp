@@ -31,7 +31,8 @@ struct ListNode {
 //#include "10-regular-expression.cpp"
 //#include "11-container-with-most-water.cpp"
 //#include "12-integer-to-roman.cpp"
-#include "13-roman-to-integer.cpp"
+//#include "13-roman-to-integer.cpp"
+#include "14-longest-common-prefix.cpp"
 
 
 
@@ -342,9 +343,21 @@ int main() {
 }
 #endif
 
-
-
-
+#ifdef LEETCODE_14
+int main() {
+    string line;
+    vector<string> strs;
+    while (getline(cin, line)) {
+        if (!line.empty()) {
+            strs.push_back(line);
+        } else {
+            string ret = Solution().longestCommonPrefix(strs);
+            cout << ret << endl;
+            strs.clear();
+        }
+    }
+}
+#endif
 
 
 
