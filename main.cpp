@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <assert.h>
 #include <limits.h>
+#include <math.h>
 
 using namespace std;
 
@@ -27,7 +28,8 @@ struct ListNode {
 //#include "7-reverse-integer.cpp"
 //#include "8-string-to-integer.cpp"
 //#include "9-palindrome-number.cpp"
-#include "10-regular-expression.cpp"
+//#include "10-regular-expression.cpp"
+#include "11-container-with-most-water.cpp"
 
 
 
@@ -295,7 +297,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_11
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> height = stringToIntergerVector(line);
 
+        int ret = Solution().maxArea(height);
+
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
