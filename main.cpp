@@ -32,7 +32,8 @@ struct ListNode {
 //#include "11-container-with-most-water.cpp"
 //#include "12-integer-to-roman.cpp"
 //#include "13-roman-to-integer.cpp"
-#include "14-longest-common-prefix.cpp"
+//#include "14-longest-common-prefix.cpp"
+#include "15-3sum.cpp"
 
 
 
@@ -47,7 +48,7 @@ void trimRightTrailingSpaces(string &input) {
                         [](int ch) {return !isspace(ch);}).base(), input.end());
 }
 
-vector<int> stringToIntergerVector(string input) {
+vector<int> stringToIntegerVector(string input) {
     vector<int> output;
     trimLeftTrailingSpaces(input);
     trimRightTrailingSpaces(input);
@@ -82,7 +83,7 @@ string integerVectorToString(vector<int> list, int length=-1) {
 }
 
 ListNode* stringToListNode(string input) {
-    vector<int> list = stringToIntergerVector(input);
+    vector<int> list = stringToIntegerVector(input);
 
     ListNode *dummyRoot = new ListNode(0);
     ListNode *ptr = dummyRoot;
@@ -196,9 +197,9 @@ int main() {
 int main() {
     string line;
     while (getline(cin, line)) {
-        vector<int> nums1 = stringToIntergerVector(line);
+        vector<int> nums1 = stringToIntegerVector(line);
         getline(cin, line);
-        vector<int> nums2 = stringToIntergerVector(line);
+        vector<int> nums2 = stringToIntegerVector(line);
 
         double ret = Solution().findMedianSortedArrays(nums1, nums2);
 
@@ -359,11 +360,20 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_15
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
 
+        vector<vector<int> > ret = Solution().threeSum(nums);
 
-
-
-
+        for (const auto& item : ret) {
+            cout << integerVectorToString(item) << endl;
+        }
+    }
+}
+#endif
 
 
 
