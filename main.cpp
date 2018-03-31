@@ -30,7 +30,8 @@ struct ListNode {
 //#include "9-palindrome-number.cpp"
 //#include "10-regular-expression.cpp"
 //#include "11-container-with-most-water.cpp"
-#include "12-integer-to-roman.cpp"
+//#include "12-integer-to-roman.cpp"
+#include "13-roman-to-integer.cpp"
 
 
 
@@ -327,6 +328,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_13
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        string s = stringToString(line);
+
+        int ret = Solution().romanToInt(s);
+
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
