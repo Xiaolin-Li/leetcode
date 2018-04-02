@@ -34,7 +34,8 @@ struct ListNode {
 //#include "13-roman-to-integer.cpp"
 //#include "14-longest-common-prefix.cpp"
 //#include "15-3sum.cpp"
-#include "16-3sum-closest.cpp"
+//#include "16-3sum-closest.cpp"
+#include "17-letter-combinations.cpp"
 
 
 
@@ -393,7 +394,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_17
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        string digits = stringToString(line);
+        vector<string> ret = Solution().letterCombinations(digits);
 
+        for (const auto &str : ret) {
+            cout << str << endl;
+        }
+    }
+}
+#endif
 
 
 
