@@ -1,3 +1,3 @@
 
 target:
-	g++ -o 0solve -std=c++11 main.cpp
+	g++ -o 000solve -std=c++11 main.cpp
