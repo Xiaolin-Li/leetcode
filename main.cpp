@@ -33,7 +33,8 @@ struct ListNode {
 //#include "12-integer-to-roman.cpp"
 //#include "13-roman-to-integer.cpp"
 //#include "14-longest-common-prefix.cpp"
-#include "15-3sum.cpp"
+//#include "15-3sum.cpp"
+#include "16-3sum-closest.cpp"
 
 
 
@@ -375,10 +376,22 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_16
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
 
+        getline(cin, line);
+        int target = stringToInteger(line);
 
+        int ret = Solution().threeSumClosest(nums, target);
 
-
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
