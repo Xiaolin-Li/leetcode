@@ -35,7 +35,8 @@ struct ListNode {
 //#include "14-longest-common-prefix.cpp"
 //#include "15-3sum.cpp"
 //#include "16-3sum-closest.cpp"
-#include "17-letter-combinations.cpp"
+//#include "17-letter-combinations.cpp"
+#include "18-4sum.cpp"
 
 
 
@@ -408,7 +409,22 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_18
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
 
+        getline(cin, line);
+        int target = stringToInteger(line);
+
+        vector<vector<int>> ret = Solution().fourSum(nums, target);
+        
+        for (const auto &vec : ret)
+            cout << integerVectorToString(vec) << endl;
+    }
+}
+#endif
 
 
 
