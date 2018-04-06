@@ -45,7 +45,8 @@ struct ListNode {
 //#include "022-generate-parentheses.cpp"
 //#include "023-merge-k-sorted.cpp"
 //#include "024-swap-nodes.cpp"
-#include "025-reverse-nodes-k.cpp"
+//#include "025-reverse-nodes-k.cpp"
+#include "026-remove-duplicates.cpp"
 
 
 
@@ -544,6 +545,23 @@ int main() {
     }
 }
 #endif
+
+#ifdef LEETCODE_26
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+
+        int ret = Solution().removeDuplicates(nums);
+
+        cout << ret << endl;
+        cout << integerVectorToString(nums) << endl;
+    }
+    return 0;
+}
+#endif
+
+
 
 
 
