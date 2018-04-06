@@ -44,7 +44,8 @@ struct ListNode {
 //#include "021-merge-two-sorted.cpp"
 //#include "022-generate-parentheses.cpp"
 //#include "023-merge-k-sorted.cpp"
-#include "024-swap-nodes.cpp"
+//#include "024-swap-nodes.cpp"
+#include "025-reverse-nodes-k.cpp"
 
 
 
@@ -528,6 +529,21 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_25
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        ListNode *list = stringToListNode(line);
+        getline(cin, line);
+        int k = stringToInteger(line);
+
+        ListNode *ret = Solution().reverseKGroup(list, k);
+
+        cout << listNodeToString(ret) << endl;
+
+    }
+}
+#endif
 
 
 
