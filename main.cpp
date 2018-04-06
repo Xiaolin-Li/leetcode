@@ -49,7 +49,8 @@ struct ListNode {
 //#include "026-remove-duplicates.cpp"
 //#include "027-remove-element.cpp"
 //#include "028-strstr.cpp"
-#include "029-divide.cpp"
+//#include "029-divide.cpp"
+#include "030-substring-with-concat.cpp"
 
 
 
@@ -607,6 +608,27 @@ int main() {
         int ret = Solution().divide(x, y);
 
         cout << ret << endl;
+    }
+    return 0;
+}
+#endif
+
+#ifdef LEETCODE_30
+int main() {
+    string line;
+    vector<string> words;
+    while (getline(cin, line)) {
+        string s = stringToString(line);
+        while (getline(cin, line)) {
+            string word = stringToString(line);
+            if (word.empty())
+                break;
+            words.push_back(word);
+        }
+
+        const vector<int> &ret = Solution().findSubstring(s, words);
+
+        cout << integerVectorToString(ret) << endl;
     }
     return 0;
 }
