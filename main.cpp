@@ -48,7 +48,8 @@ struct ListNode {
 //#include "025-reverse-nodes-k.cpp"
 //#include "026-remove-duplicates.cpp"
 //#include "027-remove-element.cpp"
-#include "028-strstr.cpp"
+//#include "028-strstr.cpp"
+#include "029-divide.cpp"
 
 
 
@@ -595,7 +596,21 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_29
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        int x = stringToInteger(line);
+        getline(cin, line);
+        int y = stringToInteger(line);
 
+        int ret = Solution().divide(x, y);
+
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
