@@ -41,7 +41,8 @@ struct ListNode {
 //#include "18-4sum.cpp"
 //#include "019-remove-nth-node.cpp"
 //#include "020-valid-parentheses.cpp"
-#include "021-merge-two-sorted.cpp"
+//#include "021-merge-two-sorted.cpp"
+#include "022-generate-parentheses.cpp"
 
 
 
@@ -477,7 +478,20 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_22
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        int n = stringToInteger(line);
 
+        const vector<string> &ret = Solution().generateParenthesis(n);
+
+        for (const auto &str : ret)
+            cout << str << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
