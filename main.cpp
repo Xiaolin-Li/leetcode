@@ -47,7 +47,8 @@ struct ListNode {
 //#include "024-swap-nodes.cpp"
 //#include "025-reverse-nodes-k.cpp"
 //#include "026-remove-duplicates.cpp"
-#include "027-remove-element.cpp"
+//#include "027-remove-element.cpp"
+#include "028-strstr.cpp"
 
 
 
@@ -574,6 +575,21 @@ int main() {
 
         cout << ret << endl;
         cout << integerVectorToString(nums) << endl;
+    }
+    return 0;
+}
+#endif
+
+#ifdef LEETCODE_28
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        string haystack = stringToString(line);
+        getline(cin, line);
+        string needle = stringToString(line);
+
+        int ret = Solution().strStr(haystack, needle);
+        cout << ret << endl;
     }
     return 0;
 }
