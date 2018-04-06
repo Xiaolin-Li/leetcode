@@ -43,7 +43,8 @@ struct ListNode {
 //#include "020-valid-parentheses.cpp"
 //#include "021-merge-two-sorted.cpp"
 //#include "022-generate-parentheses.cpp"
-#include "023-merge-k-sorted.cpp"
+//#include "023-merge-k-sorted.cpp"
+#include "024-swap-nodes.cpp"
 
 
 
@@ -513,6 +514,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_24
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        ListNode *list = stringToListNode(line);
+
+        ListNode *ret = Solution().swapPairs(list);
+
+        cout << listNodeToString(ret) << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
