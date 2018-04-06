@@ -20,7 +20,6 @@ public:
             } else
                 break;
         }
-
         return head;
     }
 };
