@@ -42,7 +42,8 @@ struct ListNode {
 //#include "019-remove-nth-node.cpp"
 //#include "020-valid-parentheses.cpp"
 //#include "021-merge-two-sorted.cpp"
-#include "022-generate-parentheses.cpp"
+//#include "022-generate-parentheses.cpp"
+#include "023-merge-k-sorted.cpp"
 
 
 
@@ -493,6 +494,24 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_23
+int main() {
+    string line;
+    vector<ListNode *> lists;
+    while (getline(cin, line)) {
+        if (line.empty()) {
+            ListNode *ret = Solution().mergeKLists(lists);
+            
+            cout << listNodeToString(ret) << endl;
+            lists.clear();
+        } else {
+            ListNode *list = stringToListNode(line);
+            lists.push_back(list);
+        }
+    }
+    return 0;
+}
+#endif
 
 
 
