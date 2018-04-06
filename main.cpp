@@ -3,6 +3,8 @@
 #include <cstring>
 #include <string>
 #include <vector>
+#include <stack>
+#include <queue>
 #include <unordered_map>
 #include <algorithm>
 #include <assert.h>
@@ -37,7 +39,8 @@ struct ListNode {
 //#include "16-3sum-closest.cpp"
 //#include "17-letter-combinations.cpp"
 //#include "18-4sum.cpp"
-#include "019-remove-nth-node.cpp"
+//#include "019-remove-nth-node.cpp"
+#include "020-valid-parentheses.cpp"
 
 
 
@@ -444,6 +447,17 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_20
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        bool ret = Solution().isValid(line);
+
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
