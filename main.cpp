@@ -36,7 +36,8 @@ struct ListNode {
 //#include "15-3sum.cpp"
 //#include "16-3sum-closest.cpp"
 //#include "17-letter-combinations.cpp"
-#include "18-4sum.cpp"
+//#include "18-4sum.cpp"
+#include "019-remove-nth-node.cpp"
 
 
 
@@ -426,7 +427,22 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_19
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        ListNode *head = stringToListNode(line);
+        getline(cin, line);
+        int n = stringToInteger(line);
 
+        ListNode *ret = Solution().removeNthFromEnd(head, n);
+
+        string out = listNodeToString(ret);
+        cout << out << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
