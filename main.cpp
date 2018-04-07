@@ -56,7 +56,8 @@ struct ListNode {
 //#include "033-search-in-rotated.cpp"
 //#include "034-search-for-a-range.cpp"
 //#include "035-search-insert.cpp"
-#include "036-valid-sudoku.cpp"
+//#include "036-valid-sudoku.cpp"
+#include "038-count-and-say.cpp"
 
 
 
@@ -718,6 +719,22 @@ int main() {
     return 0;
 }
 #endif
+
+#ifdef LEETCODE_38
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        int n = stringToInteger(line);
+
+        string ret = Solution().countAndSay(n);
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
+
+
+
 
 
 
