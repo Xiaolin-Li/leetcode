@@ -52,7 +52,8 @@ struct ListNode {
 //#include "029-divide.cpp"
 //#include "030-substring-with-concat.cpp"
 //#include "031-next-permutation.cpp"
-#include "032-longest-valid-parentheses.cpp"
+//#include "032-longest-valid-parentheses.cpp"
+#include "033-search-in-rotated.cpp"
 
 
 
@@ -664,6 +665,20 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_33
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+        getline(cin, line);
+        int target = stringToInteger(line);
+
+        int ret = Solution().search(nums, target);
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
