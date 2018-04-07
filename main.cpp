@@ -59,7 +59,8 @@ struct ListNode {
 //#include "036-valid-sudoku.cpp"
 //#include "038-count-and-say.cpp"
 //#include "039-combination-sum.cpp"
-#include "040-combination-sum-2.cpp"
+//#include "040-combination-sum-2.cpp"
+#include "041-first-missing-positive.cpp"
 
 
 
@@ -769,6 +770,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_41
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+
+        int ret = Solution().firstMissingPositive(nums);
+
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
