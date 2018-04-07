@@ -58,7 +58,8 @@ struct ListNode {
 //#include "035-search-insert.cpp"
 //#include "036-valid-sudoku.cpp"
 //#include "038-count-and-say.cpp"
-#include "039-combination-sum.cpp"
+//#include "039-combination-sum.cpp"
+#include "040-combination-sum-2.cpp"
 
 
 
@@ -743,6 +744,23 @@ int main() {
         int target = stringToInteger(line);
 
         vector<vector<int>> ret = Solution().combinationSum(nums, target);
+        for (const auto &vec : ret) {
+            cout << integerVectorToString(vec) << endl;
+        }
+    }
+    return 0;
+}
+#endif
+
+#ifdef LEETCODE_40
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+        getline(cin, line);
+        int target = stringToInteger(line);
+
+        vector<vector<int>> ret = Solution().combinationSum2(nums, target);
         for (const auto &vec : ret) {
             cout << integerVectorToString(vec) << endl;
         }
