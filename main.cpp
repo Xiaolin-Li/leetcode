@@ -54,7 +54,8 @@ struct ListNode {
 //#include "031-next-permutation.cpp"
 //#include "032-longest-valid-parentheses.cpp"
 //#include "033-search-in-rotated.cpp"
-#include "034-search-for-a-range.cpp"
+//#include "034-search-for-a-range.cpp"
+#include "035-search-insert.cpp"
 
 
 
@@ -696,6 +697,20 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_35
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+        getline(cin, line);
+        int target = stringToInteger(line);
+
+        int ret = Solution().searchInsert(nums, target);
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
