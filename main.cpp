@@ -50,7 +50,8 @@ struct ListNode {
 //#include "027-remove-element.cpp"
 //#include "028-strstr.cpp"
 //#include "029-divide.cpp"
-#include "030-substring-with-concat.cpp"
+//#include "030-substring-with-concat.cpp"
+#include "031-next-permutation.cpp"
 
 
 
@@ -633,6 +634,30 @@ int main() {
     return 0;
 }
 #endif
+
+#ifdef LEETCODE_31
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+
+        Solution().nextPermutation(nums);
+
+        cout << integerVectorToString(nums) << endl;
+    }
+    return 0;
+}
+#endif
+
+
+
+
+
+
+
+
+
+
 
 
 
