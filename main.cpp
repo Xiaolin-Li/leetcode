@@ -51,7 +51,8 @@ struct ListNode {
 //#include "028-strstr.cpp"
 //#include "029-divide.cpp"
 //#include "030-substring-with-concat.cpp"
-#include "031-next-permutation.cpp"
+//#include "031-next-permutation.cpp"
+#include "032-longest-valid-parentheses.cpp"
 
 
 
@@ -649,6 +650,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_32
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        string str = stringToString(line);
+
+        int ret = Solution().longestValidParentheses(line);
+
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
