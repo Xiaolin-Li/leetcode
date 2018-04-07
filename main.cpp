@@ -60,7 +60,8 @@ struct ListNode {
 //#include "038-count-and-say.cpp"
 //#include "039-combination-sum.cpp"
 //#include "040-combination-sum-2.cpp"
-#include "041-first-missing-positive.cpp"
+//#include "041-first-missing-positive.cpp"
+#include "055-jump-game.cpp"
 
 
 
@@ -785,7 +786,11 @@ int main() {
 #endif
 
 
-
+#ifdef LEETCODE_55
+int main() {
+    return 0;
+}
+#endif
 
 
 
