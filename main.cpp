@@ -55,7 +55,8 @@ struct ListNode {
 //#include "032-longest-valid-parentheses.cpp"
 //#include "033-search-in-rotated.cpp"
 //#include "034-search-for-a-range.cpp"
-#include "035-search-insert.cpp"
+//#include "035-search-insert.cpp"
+#include "036-valid-sudoku.cpp"
 
 
 
@@ -712,7 +713,11 @@ int main() {
 }
 #endif
 
-
+#ifdef LEETCODE_36
+int main() {
+    return 0;
+}
+#endif
 
 
 
