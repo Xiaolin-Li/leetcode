@@ -81,7 +81,8 @@ struct TreeNode {
 //#include "100-same-tree.cpp"
 //#include "088-merge-sorted-array.cpp"
 //#include "111-minimum-depth.cpp"
-#include "112-path-sum.cpp"
+//#include "112-path-sum.cpp"
+#include "113-path-sum-2.cpp"
 
 
 
@@ -915,6 +916,10 @@ int main() {return 0;}
 #endif
 
 #ifdef LEETCODE_112
+int main() {return 0;}
+#endif
+
+#ifdef LEETCODE_113
 int main() {return 0;}
 #endif
 
