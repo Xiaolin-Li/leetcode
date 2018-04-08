@@ -68,7 +68,8 @@ struct ListNode {
 //#include "050-pow.cpp"
 //#include "053-maximum-subarray.cpp"
 //#include "062-unique-paths.cpp"
-#include "063-unique-paths-2.cpp"
+//#include "063-unique-paths-2.cpp"
+#include "078-subsets.cpp"
 
 
 
@@ -869,7 +870,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_78
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
 
+        vector<vector<int>> ret = Solution().subsets(nums);
+        for (auto &vec : ret) 
+            cout << integerVectorToString(vec) << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
