@@ -65,7 +65,8 @@ struct ListNode {
 //#include "055-jump-game.cpp"
 //#include "046-permutations.cpp"
 //#include "047-permutations-2.cpp"
-#include "050-pow.cpp"
+//#include "050-pow.cpp"
+#include "053-maximum-subarray.cpp"
 
 
 
@@ -834,6 +835,29 @@ int main() {
     }
 }
 #endif
+
+#ifdef LEETCODE_53
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+
+        int ret = Solution().maxSubArray(nums);
+        cout << ret << endl;
+    }
+    return 0;
+}
+#endif
+
+
+
+
+
+
+
+
+
+
 
 
 
