@@ -6,6 +6,7 @@
 #include <stack>
 #include <queue>
 #include <unordered_map>
+#include <unordered_set>
 #include <algorithm>
 #include <assert.h>
 #include <limits.h>
@@ -62,7 +63,8 @@ struct ListNode {
 //#include "040-combination-sum-2.cpp"
 //#include "041-first-missing-positive.cpp"
 //#include "055-jump-game.cpp"
-#include "046-permutations.cpp"
+//#include "046-permutations.cpp"
+#include "047-permutations-2.cpp"
 
 
 
@@ -807,6 +809,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_47
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+        
+        vector<vector<int>> res = Solution().permuteUnique(nums);
+        for (const auto &vec : res)
+            cout << integerVectorToString(vec) << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
