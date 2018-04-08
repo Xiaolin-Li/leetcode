@@ -64,7 +64,8 @@ struct ListNode {
 //#include "041-first-missing-positive.cpp"
 //#include "055-jump-game.cpp"
 //#include "046-permutations.cpp"
-#include "047-permutations-2.cpp"
+//#include "047-permutations-2.cpp"
+#include "050-pow.cpp"
 
 
 
@@ -823,6 +824,16 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_50
+int main() {
+    double x;
+    int n;
+    while (cin >> x >> n) {
+        double ret = Solution().myPow(x, n);
+        cout << ret << endl;
+    }
+}
+#endif
 
 
 
