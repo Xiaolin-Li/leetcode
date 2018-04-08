@@ -80,7 +80,8 @@ struct TreeNode {
 //#include "080-remove-duplicates-2.cpp"
 //#include "100-same-tree.cpp"
 //#include "088-merge-sorted-array.cpp"
-#include "111-minimum-depth.cpp"
+//#include "111-minimum-depth.cpp"
+#include "112-path-sum.cpp"
 
 
 
@@ -910,6 +911,10 @@ int main() {return 0;}
 #endif
 
 #ifdef LEETCODE_111
+int main() {return 0;}
+#endif
+
+#ifdef LEETCODE_112
 int main() {return 0;}
 #endif
 
