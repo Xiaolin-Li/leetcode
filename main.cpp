@@ -67,7 +67,8 @@ struct ListNode {
 //#include "047-permutations-2.cpp"
 //#include "050-pow.cpp"
 //#include "053-maximum-subarray.cpp"
-#include "062-unique-paths.cpp"
+//#include "062-unique-paths.cpp"
+#include "063-unique-paths-2.cpp"
 
 
 
@@ -862,7 +863,11 @@ int main() {
 }
 #endif
 
-
+#ifdef LEETCODE_63
+int main() {
+    return 0;
+}
+#endif
 
 
 
