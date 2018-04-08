@@ -21,6 +21,13 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
 
 //#include "1-two-sum.cpp"
 //#include "2-add-two.cpp"
@@ -70,7 +77,8 @@ struct ListNode {
 //#include "062-unique-paths.cpp"
 //#include "063-unique-paths-2.cpp"
 //#include "078-subsets.cpp"
-#include "080-remove-duplicates-2.cpp"
+//#include "080-remove-duplicates-2.cpp"
+#include "100-same-tree.cpp"
 
 
 
@@ -891,7 +899,9 @@ int main() {
 }
 #endif
 
-
+#ifdef LEETCODE_100
+int main() {return 0;}
+#endif
 
 
 
