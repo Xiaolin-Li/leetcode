@@ -61,7 +61,8 @@ struct ListNode {
 //#include "039-combination-sum.cpp"
 //#include "040-combination-sum-2.cpp"
 //#include "041-first-missing-positive.cpp"
-#include "055-jump-game.cpp"
+//#include "055-jump-game.cpp"
+#include "046-permutations.cpp"
 
 
 
@@ -792,6 +793,19 @@ int main() {
 }
 #endif
 
+#ifdef LEETCODE_46
+int main() {
+    string line;
+    while (getline(cin, line)) {
+        vector<int> nums = stringToIntegerVector(line);
+        
+        vector<vector<int>> res = Solution().permute(nums);
+        for (const auto &vec : res)
+            cout << integerVectorToString(vec) << endl;
+    }
+    return 0;
+}
+#endif
 
 
 
